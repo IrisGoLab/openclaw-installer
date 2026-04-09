@@ -9,8 +9,8 @@
     <!-- Open Graph -->
     <meta property="og:title" content="PCClaw — OpenClaw for Windows">
     <meta property="og:description" content="14 Windows-native AI agent skills + one-command installer. The missing piece for OpenClaw on PC.">
-    <meta property="og:image" content="https://openclaw.irisgo.xyz/og-image.png">
-    <meta property="og:url" content="https://openclaw.irisgo.xyz">
+    <meta property="og:image" content="https://pcclaw.ai/pcclaw-logo.png">
+    <meta property="og:url" content="https://pcclaw.ai">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card -->
@@ -167,7 +167,7 @@
 
         <div class="max-w-4xl mx-auto px-4 py-16 text-center">
             <div class="inline-block bg-lobster/20 text-lobster-100 px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-lobster/30">
-                v3.0.0 — 17 Skills, 5+ Providers
+                v3.1.0 — 17 Skills, 5+ Providers, GUI Installer
             </div>
 
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
@@ -180,12 +180,22 @@
                 PCClaw brings 14 Windows-native skills to OpenClaw — screenshot, OCR, UI automation, clipboard, browser integration, task scheduling, local AI inference, file management, system diagnostics, speech (STT + TTS), notifications, and more. Plus a one-command installer.
             </p>
 
-            <!-- Quick Install Command -->
-            <div class="code-block p-5 text-left max-w-xl mx-auto mb-3">
-                <button class="copy-btn" onclick="copyCommand(this)">Copy</button>
-                <code class="text-green-400 text-base md:text-lg">irm openclaw.irisgo.xyz/i | iex</code>
+            <!-- Download Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <a href="https://github.com/IrisGoLab/PCClaw/releases/download/v3.1.0/PCClaw-Setup.exe"
+                   class="inline-flex items-center gap-3 bg-lobster hover:bg-lobster/90 text-white font-bold px-8 py-4 rounded-xl text-lg transition shadow-lg">
+                    <span class="text-2xl">🦞</span>
+                    Download PCClaw-Setup.exe
+                    <span class="text-sm font-normal opacity-75">~2 MB</span>
+                </a>
             </div>
-            <p class="text-foam/60 text-sm">Run in PowerShell on Windows 10/11</p>
+            <p class="text-foam/60 text-sm mb-4">Windows 10/11 · Double-click to install · No PowerShell needed</p>
+            <!-- Quick Install Command -->
+            <div class="code-block p-5 text-left max-w-xl mx-auto mb-3 mt-4">
+                <button class="copy-btn" onclick="copyCommand(this)">Copy</button>
+                <code class="text-green-400 text-base md:text-lg">irm pcclaw.ai/i | iex</code>
+            </div>
+            <p class="text-foam/60 text-sm">Or run in PowerShell on Windows 10/11</p>
         </div>
     </header>
 
@@ -444,7 +454,7 @@
                         <h3 class="font-semibold text-ocean">Run the Installer</h3>
                     </div>
                     <p class="text-gray-600 text-sm">
-                        One command in PowerShell. It installs Node.js, Git, and OpenClaw automatically if needed.
+                        Download PCClaw-Setup.exe and double-click — or run <code class="mono text-xs bg-gray-100 px-1 rounded">irm pcclaw.ai/i | iex</code> in PowerShell. Both install Node.js, Git, and OpenClaw automatically.
                     </p>
                 </div>
 
@@ -476,19 +486,36 @@
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold text-ocean text-center mb-12">Install</h2>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- GUI Installer -->
+                <div class="bg-lobster/5 border-2 border-lobster/30 rounded-xl p-6 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-lobster text-white text-xs font-bold px-3 py-1 rounded-full">RECOMMENDED</div>
+                    <div class="flex items-center gap-3 mb-4 mt-2">
+                        <span class="text-2xl">🦞</span>
+                        <div>
+                            <h3 class="font-semibold text-ocean">GUI Installer</h3>
+                            <p class="text-gray-500 text-xs">Double-click, done in 2 min</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/IrisGoLab/PCClaw/releases/download/v3.1.0/PCClaw-Setup.exe"
+                       class="block w-full text-center bg-lobster hover:bg-lobster/90 text-white font-semibold py-2.5 rounded-lg text-sm transition">
+                        Download PCClaw-Setup.exe
+                    </a>
+                    <p class="text-center text-gray-400 text-xs mt-2">~2 MB · Windows 10/11</p>
+                </div>
+
                 <!-- Interactive -->
                 <div class="bg-sand rounded-xl p-6">
                     <div class="flex items-center gap-3 mb-4">
                         <span class="text-2xl">🪟</span>
                         <div>
-                            <h3 class="font-semibold text-ocean">Interactive (Recommended)</h3>
-                            <p class="text-gray-500 text-xs">Guides you step by step</p>
+                            <h3 class="font-semibold text-ocean">PowerShell Interactive</h3>
+                            <p class="text-gray-500 text-xs">Guided step by step</p>
                         </div>
                     </div>
                     <div class="code-block p-4">
                         <button class="copy-btn" onclick="copyCommand(this)">Copy</button>
-                        <code class="text-green-400 text-sm">irm openclaw.irisgo.xyz/i | iex</code>
+                        <code class="text-green-400 text-sm">irm pcclaw.ai/i | iex</code>
                     </div>
                 </div>
 
